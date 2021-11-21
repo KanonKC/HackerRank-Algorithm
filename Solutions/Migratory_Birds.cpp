@@ -14,7 +14,7 @@ int migratoryBirds(vector<int> arr) {
     int len = arr.size(),index = 0;
     int *key = new int(len);
     int *val = new int(len);
-
+    
 }
 
 int main(){
