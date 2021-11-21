@@ -1,3 +1,4 @@
-*.exe
+.dist/
+.vscode/
 Solutions/tempCodeRunnerFile.c
-.dist
+*.exe
