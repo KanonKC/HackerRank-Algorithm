@@ -9,12 +9,37 @@ using namespace std;
  * The function accepts INTEGER_ARRAY arr as parameter.
  */
 
+int isIn(int n,int *arr,int len){
+    for(int i=0;i<len;i++){
+        if(n == arr[i])
+            return i;
+    }
+    return -1;
+}
 
 int migratoryBirds(vector<int> arr) {
     int len = arr.size(),index = 0;
     int *key = new int(len);
     int *val = new int(len);
-    
+    for(int i=0;i<arr.size();i++){
+        int found = isIn(arr[i],key,index);
+        if(found != -1){ // Found in Key
+            val[found]++;
+        }
+        else{ // Create New
+            key[index] = arr[i];
+            val[index] = 1;
+            index++;
+        }
+    }
+    int max_key = -1,max_val = -1;
+    for(int i=0;i<index;i++){
+        if(val[i] > max_val || val[i] == max_val && key[i] < max_key){
+            max_val = val[i];
+            max_key = key[i];
+        }
+    }
+    return max_key;
 }
 
 int main(){
