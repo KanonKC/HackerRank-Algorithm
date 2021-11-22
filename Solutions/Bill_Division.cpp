@@ -20,5 +20,5 @@ void bonAppetit(vector<int> bill, int k, int b) {
 }
 
 int main(){
-
+    int 
 }
