@@ -16,9 +16,21 @@ void bonAppetit(vector<int> bill, int k, int b) {
     for(int i=0;i<bill.size();i++){
         if(i!=k) sum += bill[i];
     }
-    cout << b-(sum/2);
+    int charge = b-(sum/2);
+    if(charge==0)
+        cout << "Bon Appetit";
+    else
+        cout << charge;
 }
 
 int main(){
-    int 
+    int n,k,b,input;
+    vector<int> bill;
+    cin >> n >> k;
+    for(int i=0;i<n;i++){
+        cin >> input;
+        bill.push_back(input);
+    }
+    cin >> b;
+    bonAppetit(bill,k,b);
 }
