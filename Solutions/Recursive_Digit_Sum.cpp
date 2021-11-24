@@ -30,7 +30,7 @@ int superDigitRecursive(string n){
 
 int superDigit(string n, int k) {
     string p = "";
-    for(int i=0;i<k;i++) p += n;
+    for(int i=0;i<k%9;i++) p += n; // << Discrete Math Very Important!
     return superDigitRecursive(p);
 }
 
