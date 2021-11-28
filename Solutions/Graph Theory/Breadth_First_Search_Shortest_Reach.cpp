@@ -55,13 +55,6 @@ vector<int> bfs(int n, int m, vector<vector<int>> edges, int s) {
         adj[edges[i][1]][edges[i][0]] = 1;
     }
 
-    // for(int i=0;i<n;i++){
-    //     for(int j=0;j<n;j++){
-    //         cout << adj[i][j] << " ";
-    //     }
-    //     cout << "\n";
-    // }
-
     // Running Queue (BFS)
 
     vector<int> distance;
